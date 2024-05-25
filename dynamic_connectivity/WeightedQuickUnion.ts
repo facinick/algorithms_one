@@ -3,12 +3,15 @@
   cost of finding roots is easier, in previous (quick union, this wasn't the case)
 */
 
+// depth of any node here is at most log base 2 of N
+
 class WeightedQuickUnion {
 
   private id: Array<number>;
   private N: number;
   private nComponents: number;
   // keeps weight of tree with root at the item
+  // = number of items with root as the node INDEX
   private weights: Array<number>;
 
   /*
@@ -45,7 +48,7 @@ class WeightedQuickUnion {
 
   // constant time operation every time connected is performed
   public connected(p: number, q: number): boolean {
-    return this.id[p] === this.id[q];
+    return this.find(p) === this.find(q);
   }
 
   /*
