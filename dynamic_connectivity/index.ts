@@ -1,8 +1,6 @@
 // import { QuickUnion } from './QuickUnion';
 // const qu = new QuickUnion(10);
 
-import { randomNumberBetween } from "./helper";
-import { Percolates } from "./percolates";
 
 // qu.display()
 // qu.union(4,3);
@@ -72,20 +70,20 @@ import { Percolates } from "./percolates";
 [6 2 6 4 6 6 6 2 4 4 ]
 */
 
-const p = new Percolates(4,4);
-p.display();
+// const p = new Percolates(3,3);
+// p.display();
 
-for( let i=0; i<16; i++) {
-  const siteToOpen = randomNumberBetween(1,16)
-  console.log(`Opening ${siteToOpen}`);
-  p.openSite(siteToOpen);
-  p.display();
-  if(p.percolating()) {
-    console.log(`System Percolating.`);
-    console.log(p.count())
-    break;
-  }
-}
+// for( let i=0; i<16; i++) {
+//   const siteToOpen = randomNumberBetween(1,9)
+//   console.log(`Opening ${siteToOpen}`);
+//   p.openSite(siteToOpen);
+//   p.display();
+//   if(p.percolating()) {
+//     console.log(`System Percolating.`);
+//     console.log(p.count())
+//     break;
+//   }
+// }
 
 
 /*

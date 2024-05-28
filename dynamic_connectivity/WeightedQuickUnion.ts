@@ -85,6 +85,10 @@ class WeightedQuickUnion {
     }
     console.log(`[${result}]`);
   }
+
+  public getData(): typeof this.id {
+    return this.id
+  }
 }
 
 export { WeightedQuickUnion };
